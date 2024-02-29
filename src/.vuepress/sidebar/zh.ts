@@ -1,26 +1,34 @@
 import { sidebar } from "vuepress-theme-hope";
 
 export const zhSidebar = sidebar({
-  "/zh/": [
-    "",
+  "/zh/docker/": [
     {
-      text: "如何使用",
+      text: "Docker 简介",
       icon: "laptop-code",
-      prefix: "demo/",
-      link: "demo/",
-      children: "structure",
+      link: "",
     },
     {
-      text: "文章",
+      text: "基本概念",
       icon: "book",
       prefix: "posts/",
       children: "structure",
     },
-    "intro",
-    {
-      text: "幻灯片",
-      icon: "person-chalkboard",
-      link: "https://plugin-md-enhance.vuejs.press/zh/guide/content/revealjs/demo.html",
-    },
   ],
+  "/zh/docker/cases/": [
+    {
+      text: "Docker 基础",
+      icon: "laptop-code",
+      link: "",
+    },
+    {
+      text: "Docker 容器",
+      icon: "laptop-code",
+      link: "",
+    },
+    {
+      text: "Docker 网络",
+      icon: "laptop-code",
+      link: "",
+    },
+  ]
 });

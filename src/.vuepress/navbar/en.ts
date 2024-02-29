@@ -5,7 +5,7 @@ export const enNavbar = navbar([
   "/demo/",
   {
     text: "Posts",
-    icon: "pen-to-square",
+    icon: "add",
     prefix: "/posts/",
     children: [
       {

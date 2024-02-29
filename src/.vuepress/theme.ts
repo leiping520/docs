@@ -4,20 +4,26 @@ import { enSidebar, zhSidebar } from "./sidebar/index.js";
 import { MR_HOPE_AVATAR } from "./logo.js";
 
 export default hopeTheme({
-  hostname: "https://mister-hope.github.io",
+  hostname: "https://leiping520.github.io",
 
   author: {
-    name: "Mr.Hope",
-    url: "https://mister-hope.com",
+    name: "George",
+    url: "https://leiping520.github.io/docs/",
   },
 
-  iconAssets: "fontawesome-with-brands",
+  //favicon: "add",
+
+  iconAssets: "iconfont",
 
   logo: "https://theme-hope-assets.vuejs.press/logo.svg",
 
-  repo: "vuepress-theme-hope/vuepress-theme-hope",
+  repo: "https://github.com/leiping520/docs/",
 
   docsDir: "src",
+
+  // 页脚
+  footer: "xxxxxx",
+  // copyright: "xxxx",
 
   blog: {
     medias: {

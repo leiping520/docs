@@ -5,15 +5,15 @@ export default defineUserConfig({
   base: "/docs/",
 
   locales: {
-    "/": {
-      lang: "en-US",
-      title: "Blog Demo",
-      description: "A blog demo for vuepress-theme-hope",
-    },
     "/zh/": {
       lang: "zh-CN",
-      title: "博客演示",
-      description: "vuepress-theme-hope 的博客演示",
+      title: "悟空",
+      description: "Docker 从入门到实践",
+    },
+    "/": {
+      lang: "en-US",
+      title: "Docker From Beginner to Practice",
+      description: "Docker From Beginner to Practice",
     },
   },
 
