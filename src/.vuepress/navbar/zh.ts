@@ -4,7 +4,7 @@ export const zhNavbar = navbar([
   {
     text: "Docker",
     icon: "docker",
-    prefix: "/zh/docker/",
+    prefix: "/docker/",
     children: [
       {
         text: "安装Docker",
@@ -13,12 +13,12 @@ export const zhNavbar = navbar([
       },
       {
         text: "Docker入门",
-        icon: "apple",
+        icon: "ability",
         link: "",
       },
       {
         text: "Docker实战",
-        icon: "Cases",
+        icon: "alias",
         link: "cases/",
       },
       {
@@ -28,12 +28,12 @@ export const zhNavbar = navbar([
       },
       {
         text: "Compose",
-        icon: "docker",
+        icon: "any",
         link: "compose/",
       },
       {
         text: "kubernetes",
-        icon: "kubernetes",
+        icon: "build",
         link: "kubernetes/",
       }
     ],

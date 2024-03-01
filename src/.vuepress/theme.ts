@@ -58,36 +58,14 @@ export default hopeTheme({
       Whatsapp: "https://example.com",
       Youtube: "https://example.com",
       Zhihu: "https://example.com",
-      MrHope: ["https://mister-hope.com", MR_HOPE_AVATAR],
     },
   },
 
   locales: {
-    "/": {
-      // navbar
-      navbar: enNavbar,
-
-      // sidebar
-      sidebar: enSidebar,
-
-      footer: "Default footer",
-
-      displayFooter: true,
-
-      blog: {
-        description: "A FrontEnd programmer",
-        intro: "/intro.html",
-      },
-
-      metaLocales: {
-        editLink: "Edit this page on GitHub",
-      },
-    },
-
     /**
      * Chinese locale config
      */
-    "/zh/": {
+    "/": {
       // navbar
       navbar: zhNavbar,
 
@@ -100,7 +78,7 @@ export default hopeTheme({
 
       blog: {
         description: "一个前端开发者",
-        intro: "/zh/intro.html",
+        intro: "/intro.html",
       },
 
       // page meta
@@ -108,12 +86,32 @@ export default hopeTheme({
         editLink: "在 GitHub 上编辑此页",
       },
     },
+    "/en/": {
+      // navbar
+      navbar: enNavbar,
+
+      // sidebar
+      sidebar: enSidebar,
+
+      footer: "Default footer",
+
+      displayFooter: true,
+
+      blog: {
+        description: "A FrontEnd programmer",
+        intro: "/en/intro.html",
+      },
+
+      metaLocales: {
+        editLink: "Edit this page on GitHub",
+      },
+    },
   },
 
   encrypt: {
     config: {
       "/demo/encrypt.html": ["1234"],
-      "/zh/demo/encrypt.html": ["1234"],
+      "/en/demo/encrypt.html": ["1234"],
     },
   },
 
