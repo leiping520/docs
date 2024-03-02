@@ -13,17 +13,13 @@ export default hopeTheme({
 
   //favicon: "add",
 
-  iconAssets: "iconfont",
+  iconAssets: "fontawesome-with-brands",
 
-  logo: "https://theme-hope-assets.vuejs.press/logo.svg",
+  logo: "/logo.svg",
 
   repo: "https://github.com/leiping520/docs/",
 
   docsDir: "src",
-
-  // 页脚
-  footer: "xxxxxx",
-  // copyright: "xxxx",
 
   blog: {
     medias: {

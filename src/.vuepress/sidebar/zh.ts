@@ -14,6 +14,38 @@ export const zhSidebar = sidebar({
       prefix: "posts/",
       children: "structure",
     },
+    {
+      text: "Dockfile 文件",
+      icon: "book",
+      prefix: "dockfile/",
+      children: [
+        {
+          text: "Dockfile指令详解",
+          icon: "mitten",
+          link: "",
+        },
+        {
+          text: "COPY 复制文件",
+          icon: "copy",
+          link: "copy.md",
+        },
+        {
+          text: "ADD 更高级的复制文件",
+          icon: "add",
+          link: "add.md",
+        },
+        {
+          text: "CMD 容器启动命令",
+          icon: "cmd",
+          link: "cmd.md",
+        },
+        {
+          text: "ENTRYPOINT 入口点",
+          icon: "entrypoint",
+          link: "entrypoint.md",
+        },
+      ],
+    }
   ],
   "/docker/cases/": [
     {
