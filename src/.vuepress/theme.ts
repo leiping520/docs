@@ -13,9 +13,9 @@ export default hopeTheme({
 
   //favicon: "add",
 
-  iconAssets: "fontawesome-with-brands",
+  iconAssets: "iconfont",
 
-  logo: "/logo.svg",
+  logo: "/logo.png",
 
   repo: "https://github.com/leiping520/docs/",
 

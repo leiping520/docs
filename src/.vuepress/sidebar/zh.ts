@@ -36,13 +36,18 @@ export const zhSidebar = sidebar({
         },
         {
           text: "CMD 容器启动命令",
-          icon: "cmd",
+          icon: "ability",
           link: "cmd.md",
         },
         {
           text: "ENTRYPOINT 入口点",
-          icon: "entrypoint",
+          icon: "actions",
           link: "entrypoint.md",
+        },
+        {
+          text: "ENV 设置环境变量",
+          icon: "advance",
+          link: "env.md",
         },
       ],
     }
