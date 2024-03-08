@@ -38,4 +38,8 @@ export const zhNavbar = navbar([
       }
     ],
   },
+  {
+    text: "MD 文档",
+    link: "/markdown.md"
+  }
 ]);

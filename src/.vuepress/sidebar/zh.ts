@@ -15,6 +15,18 @@ export const zhSidebar = sidebar({
       children: "structure",
     },
     {
+      text: "使用镜像",
+      icon: "book",
+      prefix: "images/",
+      children: [
+        {
+          text: "使用Dockerfile定制镜像",
+          icon: "book",
+          link: "dockerfile.md",
+        },
+      ],
+    },
+    {
       text: "Dockfile 文件",
       icon: "book",
       prefix: "dockfile/",
@@ -49,8 +61,48 @@ export const zhSidebar = sidebar({
           icon: "advance",
           link: "env.md",
         },
+        {
+          text: "VOLUME 定义匿名卷",
+          icon: "mesh",
+          link: "volume.md",
+        },
+        {
+          text: "EXPOSE 定义暴露的端口",
+          icon: "network",
+          link: "expose.md",
+        },
+        {
+          text: "WORKDIR 指定工作目录",
+          icon: "palette",
+          link: "workdir.md",
+        },
+        {
+          text: "USER 指定当前用户",
+          icon: "profile",
+          link: "user.md",
+        },
+        {
+          text: "SHELL 指令",
+          icon: "others",
+          link: "shell.md",
+        },
+        {
+          text: "多阶段构建",
+          icon: "software",
+          link: "multistage_build.md",
+        },
+        {
+          text: "实战多阶段构建Laravel镜像",
+          icon: "valine",
+          link: "laravel.md",
+        },
       ],
-    }
+    },
+    {
+      text: "Dockerfile 最佳实践",
+      icon: "book",
+      link: "best_practices.md",
+    },
   ],
   "/docker/cases/": [
     {
