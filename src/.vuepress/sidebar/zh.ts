@@ -215,5 +215,39 @@ export const zhSidebar = sidebar({
         },
       ]
     }
-  ]
+  ],
+
+
+  "/frontend/typescript/": [
+    {
+      text: "1.简介",
+      icon: "laptop-code",
+      link: "intro.md",
+    },
+    {
+      text: "2.基本用法",
+      icon: "laptop-code",
+      link: "intro.md",
+    },
+    {
+      text: "3.any 类型",
+      icon: "laptop-code",
+      link: "any.md",
+    },
+    {
+      text: "4.类型系统",
+      icon: "laptop-code",
+      link: "types.md",
+    },
+    {
+      text: "12.泛型",
+      icon: "",
+      link: "generics.md"
+    },
+    {
+      text: "23.tsc命令",
+      icon: "laptop-code",
+      link: "tsc.md",
+    }
+  ],
 });
