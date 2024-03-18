@@ -53,6 +53,11 @@ export const zhNavbar = navbar([
         link: "jquery/"
       },
       {
+        text: "ES6",
+        icon: "es6",
+        link: "es6/"
+      },
+      {
         text: "TypeScript",
         icon: "typescript",
         link: "typescript/"

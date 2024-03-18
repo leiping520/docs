@@ -30,6 +30,8 @@ export const zhSidebar = sidebar({
       text: "Dockfile 文件",
       icon: "book",
       prefix: "dockfile/",
+      // 可选的, 设置分组是否可以折叠，默认值是 false,
+      collapsible: true,
       children: [
         {
           text: "Dockfile指令详解",
@@ -215,6 +217,14 @@ export const zhSidebar = sidebar({
         },
       ]
     }
+  ],
+
+  "/frontend/es6/": [
+    {
+      text: "24.Module的语法",
+      icon: "module",
+      link: "module",
+    },
   ],
 
 
