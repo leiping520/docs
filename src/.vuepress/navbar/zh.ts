@@ -66,7 +66,6 @@ export const zhNavbar = navbar([
   },
   {
     text: "MD 文档",
-    icon: "markdown",
     link: "/markdown.md",
   }
 ]);
