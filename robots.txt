@@ -1,5 +1,0 @@
-
-User-agent:*
-Disallow:
-
-Sitemap: https://leiping520.github.io/docs/sitemap.xml
