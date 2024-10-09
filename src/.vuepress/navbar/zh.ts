@@ -1,9 +1,5 @@
 import { navbar } from "vuepress-theme-hope";
 
-let a:string
-    ,b:number
-    ,c:boolean
-
 export const zhNavbar = navbar([
   {
     text: "Docker",

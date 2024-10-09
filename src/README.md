@@ -8,6 +8,6 @@ bgImageStyle:
   background-attachment: fixed
 heroText: 业精于勤，荒于嬉；行成于思，毁于随。
 heroFullScreen: true
-tagline: 百年未有之大变局
+tagline: 
 footer: <a href="https://github.com/Mister-Hope">Made with vuepress-theme-hope</a>
 ---
