@@ -3,12 +3,12 @@ import { zhNavbar } from "./navbar/index.js";
 import { zhSidebar } from "./sidebar/index.js";
 
 export default hopeTheme({
-  hostname: "https://leiping520.github.io",
+  //hostname: "https://leiping520.github.io",
 
-  author: {
-    name: "George",
-    url: "https://leiping520.github.io/docs/",
-  },
+  // author: {
+  //   name: "George",
+  //   url: "https://leiping520.github.io/docs/",
+  // },
 
   //favicon: "add",
 
@@ -16,7 +16,7 @@ export default hopeTheme({
 
   logo: "/logo.png",
 
-  repo: "https://github.com/leiping520/docs/",
+  //repo: "https://github.com/leiping520/docs/",
 
   docsDir: "src",
 
@@ -28,26 +28,25 @@ export default hopeTheme({
       // sidebar
       sidebar: zhSidebar,
 
-      footer: "默认页脚",
+      //footer: "默认页脚",
 
-      displayFooter: true,
+      //displayFooter: true,
 
-      blog: {
-        description: "一个前端开发者",
-        intro: "/intro.html",
-      },
+      // blog: {
+      //   description: "一个前端开发者",
+      //   intro: "/intro.html",
+      // },
 
       // page meta
-      metaLocales: {
-        editLink: "在 GitHub 上编辑此页",
-      },
+      // metaLocales: {
+      //   editLink: "在 GitHub 上编辑此页",
+      // },
     },
   },
 
   encrypt: {
     config: {
-      "/demo/encrypt.html": ["1234"],
-      "/en/demo/encrypt.html": ["1234"],
+      "/frontend/jquery/": ["1234"],
     },
   },
 

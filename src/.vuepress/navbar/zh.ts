@@ -17,8 +17,8 @@ export const zhNavbar = navbar([
       },
       {
         text: "Docker入门",
-        icon: "ability",
-        link: "",
+        icon: "",
+        link: "README.md",
       },
       {
         text: "Docker实战",
@@ -67,5 +67,22 @@ export const zhNavbar = navbar([
   {
     text: "MD 文档",
     link: "/markdown.md",
+  },
+  {
+    text: "面试整理",
+    icon: "interview",
+    prefix: "/interview/",
+    children: [
+      {
+        text: "Mysql",
+        icon: "mysql",
+        link: "README.md"
+      },
+      {
+        text: "Redis",
+        icon: "redis",
+        link: "redis/"
+      },
+    ]
   }
 ]);
