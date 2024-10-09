@@ -69,7 +69,7 @@ export const zhNavbar = navbar([
     link: "/markdown.md",
   },
   {
-    text: "面试整理",
+    text: "面经",
     icon: "interview",
     prefix: "/interview/",
     children: [
