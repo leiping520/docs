@@ -79,6 +79,11 @@ export const zhNavbar = navbar([
         icon: "redis",
         link: "redis/"
       },
+      {
+        text: "HTTP请求解析",
+        icon: "http",
+        link: "http/"
+      },
     ]
   }
 ]);
