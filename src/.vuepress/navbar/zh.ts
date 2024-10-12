@@ -10,31 +10,37 @@ export const zhNavbar = navbar([
         text: "安装Docker",
         icon: "install",
         link: "install/",
+        activeMatch: "^/docker/install/$",
       },
       {
         text: "Docker入门",
-        icon: "",
+        icon: "home",
         link: "README.md",
+        activeMatch: "^/$",
       },
       {
         text: "Docker实战",
         icon: "alias",
         link: "cases/",
+        activeMatch: "^/docker/cases/$",
       },
       {
         text: "CI/CD",
         icon: "ci",
         link: "cases/ci_cd/",
+        activeMatch: "^/docker/cases/ci_cd/$",
       },
       {
         text: "Compose",
         icon: "any",
         link: "compose/",
+        activeMatch: "^/docker/compose/$",
       },
       {
         text: "kubernetes",
         icon: "build",
         link: "kubernetes/",
+        activeMatch: "^/docker/kubernetes/$",
       }
     ],
   },
@@ -72,17 +78,21 @@ export const zhNavbar = navbar([
       {
         text: "Mysql",
         icon: "mysql",
-        link: "README.md"
+        link: "README.md",
+        // 仅在 `/interview/mysql/` 激活
+        activeMatch: "^/interview/mysql/$",
       },
       {
         text: "Redis",
         icon: "redis",
-        link: "redis/"
+        link: "redis/",
+        activeMatch: "^/interview/redis/$",
       },
       {
         text: "HTTP请求解析",
         icon: "http",
-        link: "http/"
+        link: "http/",
+        activeMatch: "^/interview/http/$",
       },
     ]
   }
