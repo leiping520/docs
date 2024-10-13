@@ -1,7 +1,14 @@
-- 1. [mysql 索引优化](https://tech.meituan.com/2014/06/30/mysql-index.html)
+---
+icon: home
+toc: true
+sidebar: false
+---
 
 
-### mysql 知识点
+
+# MYSQL知识点
+
+> [mysql 索引优化](https://tech.meituan.com/2014/06/30/mysql-index.html)
 
 #### 基础部分
 
