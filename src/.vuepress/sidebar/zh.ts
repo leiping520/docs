@@ -2,13 +2,14 @@ import { sidebar } from "vuepress-theme-hope";
 
 
 const mySidebar = [
+  /************* docker 侧边栏 *************/
   {
     // 必要的，分组的标题文字
     text: "安装Docker",
     // 可选的, 分组标题对应的图标
     icon: "install",
     // 可选的, 分组标题对应的链接
-    link: "/docker/install",
+    link: "/docker/install/README.md",
   },
   {
     // 必要的，分组的标题文字
@@ -40,6 +41,10 @@ const mySidebar = [
         collapsible: true,
         expanded: true,
         children: [
+          {
+            text: "使用镜像",
+            link: "README.md",
+          },
           {
             text: "使用Dockerfile定制镜像",
             link: "dockerfile.md",
@@ -121,12 +126,28 @@ const mySidebar = [
         ],
       },
       {
+        text: "操作容器",
+        link: "container/",
+        icon: "home"
+      },
+      {
         text: "Dockerfile 最佳实践",
-        icon: "book",
+        icon: "home",
         link: "best_practices.md",
       },
+
     ],
   },
+  /************* docker 侧边栏 *************/
+
+  /************* 前端侧边栏 *************/
+  {
+    text: "typescript",
+    icon: "home",
+    // 可选的, 分组标题对应的链接
+    link: "/frontend/typescript/README.md",
+  },
+  /************* 前端侧边栏 *************/
 ];
 
 export const zhSidebar = sidebar(mySidebar);

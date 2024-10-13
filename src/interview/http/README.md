@@ -1,13 +1,15 @@
 ---
 #navbar: false # 当前页面禁用导航栏
+sidebar: false # 当前页面禁用侧边栏
 ---
 
+# HTTPS请求解析
 
 ::: info 信息
 HTTPS（Hypertext Transfer Protocol Secure）是一种用于安全传输数据的通信协议。它使用了加密技术，确保在客户端和服务器之间传输的数据经过加密保护，不容易被恶意方进行窃听、篡改或伪造。在前期文章《结合Wireshark抓包分析，沉浸式体验HTTP请求的一次完整交互过程》中我们介绍了HTTP的工作原理，接下来就和博主一起来了解下HTTPS的交互流程以及与HTTP的差异吧！
 :::
 
-# 1.HTTP的缺点
+## 1.HTTP的缺点
 
 - 在正式介绍HTTPS前我们先来看看HTTP协议当前存在的三大缺点：
 
@@ -21,7 +23,7 @@ HTTPS（Hypertext Transfer Protocol Secure）是一种用于安全传输数据�
 
 - 为了解决以上三个问题，便诞生了HTTPS
 
-# 2.HTTPS简介
+## 2.HTTPS简介
 
 HTTPS 被称为 HTTP Over SSL (基于SSL加密的HTTP)，这里的SSL (Secure Socket Layer) 被称为安全套接层，它是一种加密协议，不仅可应用于HTTP协议、还可应用于POP3协议、SMTP协议、VPN等。
 
@@ -31,7 +33,7 @@ TLS (Transport Layer Security) 被称为传输层安全，TLS相对于SSL 3.0版
 
 ![](/assets/images/image23.png)
 
-# 3.HTTPS交互流程
+## 3.HTTPS交互流程
 
 接下来用 Wireshark 工具抓了客户端与百度网站（https://www.baidu.com）的TLS 握手过程，可以看到下图中红色方框圈中4次TLS握手报文。
 
@@ -45,11 +47,11 @@ TLS (Transport Layer Security) 被称为传输层安全，TLS相对于SSL 3.0版
 
 ![](/assets/images/image22.png)
 
-## 3.1 阶段一：TCP三次握手建立连接
+### 3.1 阶段一：TCP三次握手建立连接
 
 ![](/assets/images/image19.png)
 
-## 3.2 阶段二：TLS握手建立安全通道
+### 3.2 阶段二：TLS握手建立安全通道
 
 通过在显示过滤器输入表达式 ==ip.addr == 36.155.132.3 and tls==过滤出TLS协议数据包。
 
@@ -66,7 +68,7 @@ TLS (Transport Layer Security) 被称为传输层安全，TLS相对于SSL 3.0版
 
 ![](/assets/images/image18.png)
 
-### 3.2.1 TLS第一次握手：client -> server (Client Hello)
+#### 3.2.1 TLS第一次握手：client -> server (Client Hello)
 
 - 客户端向服务端发送：
     - 客户端支持的协议；
@@ -82,7 +84,7 @@ TLS (Transport Layer Security) 被称为传输层安全，TLS相对于SSL 3.0版
 
 ![](/assets/images/image13.png)
 
-#### **version**
+##### **version**
 
   - 从上图中可以看到当前通信安全层协议版本（Version）为TLS 1.2。其实TLS共总有4个版本，最新为TLS 1.3，具体如下：
     - **TLS 1.3**：发布于2018年，TLS 1.3是TLS协议的最新版本，大幅简化了握手过程，提高了性能和安全性。它删除了一些不安全的加密算法，并引入了0-RTT（零往返时间）握手，以减少延迟。
@@ -90,15 +92,15 @@ TLS (Transport Layer Security) 被称为传输层安全，TLS相对于SSL 3.0版
     - **TLS 1.1**：TLS 1.1发布于2006年，引入了一些改进，包括对CBC（Cipher Block Chaining）模式的安全性改进，但仍然存在一些已知的安全问题。
     - **TLS 1.0**：TLS 1.0于1999年发布，是SSL 3.0的升级版本，修复了一些安全漏洞，但仍然存在一些安全问题。
 
-#### **Random**
+##### **Random**
 
 **Random**用于密钥的制作。这里我们将第一次握手中客户端发送给服务端的随机数记为Client Random，记住这个随机数，后面还会用到。
 
-#### **SessionID**
+##### **SessionID**
 
 **SessionID**用来表示客户端是否想复用先前存在的session。如果不复用，则此字段为0；如果想要复用，则此字段为想要复用的sessionID。是否复用由服务端确定。
 
-#### **Cipher Suites**
+##### **Cipher Suites**
 
 **密码套件列表**会全部发给服务端，服务端从中挑选一个最安全的密码套件返回客户端。
 
@@ -133,7 +135,7 @@ TLS (Transport Layer Security) 被称为传输层安全，TLS相对于SSL 3.0版
 
 ![](/assets/images/image16.png)
 
-### 3.2.2 TLS第二次握手：server -> client (1.Server Hello; 2.Certificate,Server key Exchange,Server Hello Done)
+#### 3.2.2 TLS第二次握手：server -> client (1.Server Hello; 2.Certificate,Server key Exchange,Server Hello Done)
 
 - 这一次握手时，server向client连续发送了两个报文：
     - **Server Hello**：服务端为了证明自己的身份，会发送「Server Certificate」给客户端，这个消息里含有数字证书；
@@ -156,7 +158,7 @@ TLS (Transport Layer Security) 被称为传输层安全，TLS相对于SSL 3.0版
 - 客户端和服务端就已确认了 TLS 版本和使用的密码套件 **TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256**
 :::
 
-#### **服务端发送报文：Certificate,Server key Exchange,Server Hello Done**
+##### **服务端发送报文：Certificate,Server key Exchange,Server Hello Done**
 
 - 这里服务端在一个数据包中发送了三个TLS消息：
     
@@ -196,7 +198,7 @@ TLS (Transport Layer Security) 被称为传输层安全，TLS相对于SSL 3.0版
 
         ![](/assets/images/image11.png)
 
-### 3.2.3 TLS第三次握手client -> server (Client Key Exchange, Change Cipher Spec, Encrypted Handshake Message)
+#### 3.2.3 TLS第三次握手client -> server (Client Key Exchange, Change Cipher Spec, Encrypted Handshake Message)
 
 该报文中，也是将TLS的三个消息合并到一个中发送。
 
@@ -231,7 +233,7 @@ TLS (Transport Layer Security) 被称为传输层安全，TLS相对于SSL 3.0版
       - 如果服务端收到这个消息并能解密成功，就能说明对称密钥是正确的。
     - Encrypted Handshake Message 消息其实不只是客户端会发送，之后服务端也会发送一个。
 
-### 3.2.4 TLS 第四次握手server -> client (Change Cipher Spec,Encrypted Handshake Message)
+#### 3.2.4 TLS 第四次握手server -> client (Change Cipher Spec,Encrypted Handshake Message)
 
 - 服务器也是同样的操作，发送「Change Cipher Spec」和「Encrypted Handshake Message」消息，如果双方都验证加密和解密没问题，那么TLS握手正式完成。
 
@@ -241,7 +243,7 @@ TLS (Transport Layer Security) 被称为传输层安全，TLS相对于SSL 3.0版
 HTTPS的交互过程中总共用到了几组密钥（包含对称密钥及非对称密钥）？
 :::
 
-## 3.3 阶段三：加密通信
+### 3.3 阶段三：加密通信
 
 - TLS握手完成后，客户端与服务端的所有通信内容均被加密，如果没有会话密钥则无法解密通信内容。
   
@@ -251,11 +253,11 @@ HTTPS的交互过程中总共用到了几组密钥（包含对称密钥及非对
 此处的加密通信有可能会被第三方解密吗？如果会，那么第三方运用了什么技术手段？
 :::
 
-## 3.4 阶段四：TCP四次挥手断开连接
+### 3.4 阶段四：TCP四次挥手断开连接
 
 - 关于TCP四次挥手断开连接的详细过程，前期博文已经介绍，这里就不再展开叙述，感兴趣的同学可以参阅《结合Wireshark抓包实战，图文详解TCP三次握手及四次挥手原理》。
 
-# 4.HTTPS的缺点
+## 4.HTTPS的缺点
 
 尽管HTTPS提供了许多安全优势，但也存在一些缺点：
 

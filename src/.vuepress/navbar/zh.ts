@@ -89,7 +89,7 @@ export const zhNavbar = navbar([
         activeMatch: "^/interview/redis/$",
       },
       {
-        text: "HTTP请求解析",
+        text: "HTTPS请求解析",
         icon: "http",
         link: "http/",
         activeMatch: "^/interview/http/$",

@@ -1,6 +1,11 @@
-[markdown 基础语法](https://markdown.com.cn/basic-syntax/)
+---
+#navbar: false # 当前页面禁用导航栏
+sidebar: false # 当前页面禁用侧边栏
+---
 
->微信公众号排版工具。问题或建议，请公众号留言。**[程序员翻身](#jump_8)**
+# markdown基础语法
+
+> **[markdown基础语法](https://markdown.com.cn/basic-syntax/)**
 
 建议使用 **Chrome** 浏览器，体验最佳效果。
 
@@ -10,13 +15,13 @@ Markdown是一种轻量级的「标记语言」。
 
 请阅读下方文本熟悉工具使用方法，本文可直接拷贝到微信中预览。
 
-## 1 Markdown.com.cn 简介
+## 1.Markdown.com.cn 简介
 
 - 支持自定义样式的 Markdown 编辑器
 - 支持微信公众号、知乎和稀土掘金
 - 点击右上方对应图标，一键复制到各平台
 
-## 2 Markdown语法教程
+## 2.Markdown语法教程
 
 ### 2.1 标题
 
@@ -113,7 +118,7 @@ Markdown是一种轻量级的「标记语言」。
 
 
 
-## 3. 特殊语法
+## 3.特殊语法
 
 ### 3.1 脚注
 
@@ -243,7 +248,7 @@ Markdown Nice 这么好用，简直是{喜大普奔|hē hē hē hē}呀！
 
 <![蓝1](https://markdown.com.cn/images/blue.jpg),![绿2](https://markdown.com.cn/images/green.jpg),![红3](https://markdown.com.cn.jpg)>
 
-## 4 其他语法
+## 4.其他语法
 
 ### 4.1 HTML
 
@@ -255,10 +260,4 @@ Markdown Nice 这么好用，简直是{喜大普奔|hē hē hē hē}呀！
 ### 4.2 UML
 
 不支持，推荐使用开源工具`https://draw.io/`制作后再导入图片
-
-
-## 5 致谢
-
-* 歌词经理 [wechat-fromat](https://github.com/lyricat/wechat-format "灵感来源")
-* 颜家大少 [MD2All](http://md.aclickall.com/ "MdA2All")
 
