@@ -1,6 +1,5 @@
 import { sidebar } from "vuepress-theme-hope";
 
-
 const mySidebar = [
   /************* docker 侧边栏 *************/
   {

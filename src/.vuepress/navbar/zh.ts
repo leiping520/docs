@@ -94,6 +94,13 @@ export const zhNavbar = navbar([
         link: "http/",
         activeMatch: "^/interview/http/$",
       },
+
+      {
+        text: "分布式系统",
+        icon: "distributed",
+        link: "distributed/",
+        activeMatch: "^/interview/distributed/$",
+      },
     ]
   }
 ]);
