@@ -3,6 +3,7 @@ icon: home
 toc: true
 #navbar: false # 当前页面禁用导航栏
 sidebar: false # 当前页面禁用侧边栏
+breadcrumb: false # 是否开启路径导航
 ---
 
 # HTTPS请求解析
@@ -272,3 +273,5 @@ HTTPS需要客户端、服务端双方做加解密处理，需要消耗更多CPU
 - HTTPS 并不是绝对安全的，在中间人攻击、服务器劫持等情况下几乎起不到作用。
 
 - 相比HTTP，HTTPS需要额外购买SSL证书，最便宜的证书一年300多元，如果是是企业网站证书，一年至少也得3000元。
+
+## 5.在Nginx中使用 let's encrypt 证书实现 HTTPS 

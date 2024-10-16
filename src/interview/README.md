@@ -2,9 +2,8 @@
 icon: home
 toc: true
 sidebar: false
+breadcrumb: false # 是否开启路径导航
 ---
-
-
 
 # MYSQL知识点
 

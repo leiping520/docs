@@ -3,6 +3,7 @@ icon: home
 toc: true
 #navbar: false # 当前页面禁用导航栏
 sidebar: false # 当前页面禁用侧边栏
+breadcrumb: false # 是否开启路径导航
 ---
 
 # 分布式系统

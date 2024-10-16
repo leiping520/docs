@@ -96,6 +96,13 @@ export const zhNavbar = navbar([
       },
 
       {
+        text: "PHP",
+        icon: "php",
+        link: "php/",
+        activeMatch: "^/interview/php/$",
+      },
+
+      {
         text: "分布式系统",
         icon: "distributed",
         link: "distributed/",
