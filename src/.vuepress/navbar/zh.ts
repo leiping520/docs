@@ -108,6 +108,13 @@ export const zhNavbar = navbar([
         link: "distributed/",
         activeMatch: "^/interview/distributed/$",
       },
+
+      {
+        text: "面试遇到的问题",
+        icon: "interview",
+        link: "interview_qa/",
+        activeMatch: "^/interview/interview_qa/$",
+      },
     ]
   }
 ]);
