@@ -101,12 +101,18 @@ export const zhNavbar = navbar([
         link: "php/",
         activeMatch: "^/interview/php/$",
       },
-
       {
         text: "分布式系统",
         icon: "distributed",
         link: "distributed/",
         activeMatch: "^/interview/distributed/$",
+      },
+
+      {
+        text: "高并发相关",
+        icon: "concurrent",
+        link: "concurrent/",
+        activeMatch: "^/interview/concurrent/$",
       },
 
       {
